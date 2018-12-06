@@ -7,6 +7,7 @@ import (
 	"math/rand"
 	"strconv"
 	"time"
+	"github.com/emirpasic/gods/lists/arraylist"
 )
 
 func main() {
@@ -27,10 +28,16 @@ func main() {
 		maxrand = max
 	}
 
+	list := arraylist.New()
 	for i := 0; i < num; i++ {
 		rando = rand.Intn(maxrand) + 1
+		list.Add(rando)
+	}
+
+	for i := 0; i < num; i++ {
 		// B % A gives 0
-		fmt.Printf("%"+strconv.Itoa(pow+1)+"d", rando)
+		a, _ := list.Get(i)
+		fmt.Printf("%"+strconv.Itoa(pow+1)+"d", a)
 		if (i+1)%cols == 0 {
 			fmt.Printf("\n")
 		}
