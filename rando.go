@@ -9,7 +9,6 @@ import (
 	"time"
 	"github.com/emirpasic/gods/lists/arraylist"
 	"github.com/emirpasic/gods/utils"
-
 )
 
 func main() {
