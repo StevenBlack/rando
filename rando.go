@@ -46,6 +46,7 @@ func main() {
 		maxrand = int(math.Pow10(digits))
 	} else {
 		maxrand = max
+		digits = numDigits(maxrand)
 	}
 
 	for t := 0; t < times; t++ {
@@ -76,4 +77,13 @@ func main() {
 			}
 		}
 	}
+}
+
+func numDigits(number int) int {
+	i := 0
+	for number != 0 {
+		i++
+		number /= 10
+	}
+	return i
 }
