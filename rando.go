@@ -33,8 +33,8 @@ func main() {
 	flag.IntVar(&num, "n", 1, "The number of random numbers to generate")
 	flag.IntVar(&num, "number", 1, "The number of random numbers to generate")
 
-	flag.IntVar(&times, "t", 1, "The number of times to generate the random numbers")
-	flag.IntVar(&times, "times", 1, "The number of times to generate the random numbers")
+	flag.IntVar(&times, "t", 1, "The number of trials to generate.")
+	flag.IntVar(&times, "trials", 1, "The number of trials to generate.")
 
 	flag.Parse()
 
