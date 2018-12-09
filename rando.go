@@ -13,7 +13,7 @@ import (
 
 func main() {
 	var seed int64
-	var rando, digits, num, cols, max, times int
+	var rando, digits, num, cols, max, min, times int
 	var uniq, sort bool
 
 	flag.BoolVar(&sort, "s", false, "Sort the random numbers?")
@@ -27,6 +27,8 @@ func main() {
 
 	flag.IntVar(&max, "m", 100, "The upper limit of the random numbers to generate")
 	flag.IntVar(&max, "max", 100, "The upper limit of the random numbers to generate")
+
+	flag.IntVar(&min, "min", 1, "The lower limit of the random numbers to generate")
 
 	flag.IntVar(&num, "n", 1, "The number of random numbers to generate")
 	flag.IntVar(&num, "number", 1, "The number of random numbers to generate")
@@ -43,7 +45,7 @@ func main() {
 	for t := 0; t < times; t++ {
 		list := arraylist.New()
 		for i := 0; i < num; i++ {
-			rando = rand.Intn(max) + 1
+			rando = rand.Intn(max-min) + min
 			if uniq {
 				if !list.Contains(rando) {
 					list.Add(rando)
