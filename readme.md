@@ -9,15 +9,15 @@ $ rando [flags]
 ```
 
 
-| Flag  |  Default | Action |
-|---|---|---|---|
-| -c, --columns |  1 | The number of columns to generate |
-| --max         | 100 | The upper limit of the random numbers to generate |
-| --min         | 1 | The lower limit of the random numbers to generate |
-| -n,  --number    | 1 | The number of random numbers to generate |
-| -s, --sort       | false | Sort the random numbers? |
-| -t, --trials     | 1 | The number of trials to generate. |
-| -u, --unique     | false | Should the random numbers be unique? |
+| Flag |  Default | Action |
+|---|:-:|---|
+| -c, --columns |  1 | The number of columns to generate. |
+| --max | 100 | The upper limit of the random numbers to generate. |
+| --min | 1 | The lower limit of the random numbers to generate. |
+| -n,  --number | 1 | The number of random numbers to generate. |
+| -s, --sort | false | Sort the random numbers? |
+| -t, --trials | 1 | The number of trials to generate. |
+| -u, --unique | false | Should the random numbers be unique? |
 
 ### Example 1
 
