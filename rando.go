@@ -16,12 +16,6 @@ func main() {
 	var rando, digits, num, cols, max, min, times int
 	var uniq, sort bool
 
-	flag.BoolVar(&sort, "s", false, "Sort the random numbers?")
-	flag.BoolVar(&sort, "sort", false, "Sort the random numbers?")
-
-	flag.BoolVar(&uniq, "u", false, "Should the random numbers be unique?")
-	flag.BoolVar(&uniq, "unique", false, "Should the random numbers be unique?")
-
 	flag.IntVar(&cols, "c", 1, "The number of columns to generate")
 	flag.IntVar(&cols, "columns", 1, "The number of columns to generate")
 
@@ -33,8 +27,14 @@ func main() {
 	flag.IntVar(&num, "n", 1, "The number of random numbers to generate")
 	flag.IntVar(&num, "number", 1, "The number of random numbers to generate")
 
+	flag.BoolVar(&sort, "s", false, "Sort the random numbers?")
+	flag.BoolVar(&sort, "sort", false, "Sort the random numbers?")
+
 	flag.IntVar(&times, "t", 1, "The number of trials to generate.")
 	flag.IntVar(&times, "trials", 1, "The number of trials to generate.")
+
+	flag.BoolVar(&uniq, "u", false, "Should the random numbers be unique?")
+	flag.BoolVar(&uniq, "unique", false, "Should the random numbers be unique?")
 
 	flag.Parse()
 
