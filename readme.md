@@ -21,7 +21,7 @@ $ rando [flags]
 
 ### Example 1
 
-20 random numbers between 1 and 1000 displayed 4-wide.
+Generate twenty random numbers between 1 and 1000, displayed 4-wide.
 
 ```bash
 $ rando --max=1000 --number=20 --columns=4
@@ -35,7 +35,7 @@ $ rando --max=1000 --number=20 --columns=4
 
 ### Example 2
 
-10 Loto 6/49 qiick picks.
+Generate ten Loto 6/49 qiick picks, sorting each row.
 
 ```bash
 $ rando -n=6 --max=49 -c=6 -u=true -s=true -t=10
