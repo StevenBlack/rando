@@ -8,6 +8,7 @@ A pseudo random number generator written in Go.
 $ rando [flags]
 ```
 
+### For random numbers
 
 | Flag |  Default | Action |
 |---|:-:|---|
@@ -18,6 +19,21 @@ $ rando [flags]
 | -s, --sort | false | Sort the random numbers? |
 | -t, --trials | 1 | The number of trials to generate. |
 | -u, --unique | false | Should the random numbers be unique? |
+
+### For random strings
+
+```bash
+$ rando --str=1 [flags]
+```
+
+| Flag |  Default | Action |
+|---|:-:|---|
+| -c, --columns |  1 | The number of columns to generate. |
+| -l, --length |  16 | The length of strings to generate. |
+| -n,  --number | 1 | The number of random numbers to generate. |
+| -str | false | Generate random strings instead of numbers numbers? |
+| -t, --trials | 1 | The number of trials to generate. |
+
 
 ### Example 1
 
@@ -52,5 +68,18 @@ $ rando -n=6 --max=49 -c=6 -u=true -s=true -t=10
   8  9 25 28 31 43
 ```
 
+### Example 3
+
+Generate five random strings of length 10.
+
+```bash
+$ ./rando --str=1 -l=10 -n=5
+
+oikX_STRqnjCkQ==
+czyXWZ2yEVbldA==
+or6ZN25pq0XcZg==
+JvWqAVDpDsN5Iw==
+EOTT4TrinYwt1Q==
+```
 
 
